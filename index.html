@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/favicon/site.webmanifest" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/shared.css" />
+    <!-- JavaScript -->
+    <script src="scripts/shared.js" defer></script>
+    <!-- Page Configuration -->
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Play Tic, Tac, Toe</h1>
+      <p>Built with HTML, CSS, JavaScript and - of course - lots of love!</p>
+    </header>
+    <main>
+      <!-- Player info Section -->
+      <section>
+        <div id="playerInfo">
+          <article>
+            <p>Player 1</p>
+            <p id="userName1">Player Name</p>
+            <p id="symbole1">X</p>
+            <a href="">Edit</a
+            ><!-- Should change -->
+          </article>
+          <article>
+            <p>Player 2</p>
+            <p id="userName2">Player Name</p>
+            <p id="symbole2">X</p>
+            <a href="">Edit</a
+            ><!-- Should change -->
+          </article>
+        </div>
+
+        <a href="">Start New Game</a>
+      </section>
+
+      <!-- Game FeedBack Section -->
+      <section>
+        <h1 id="winMessage"></h1>
+        <p id="extraFeedback"></p>
+      </section>
+
+      <!-- Game Board Section -->
+      <section>
+        <div class="gameBoard">
+          <div class="cell" id="cell0">X</div>
+          <div class="cell" id="cell1">X</div>
+          <div class="cell" id="cell2">X</div>
+          <div class="cell" id="cell3">X</div>
+          <div class="cell" id="cell4">X</div>
+          <div class="cell" id="cell5">X</div>
+          <div class="cell" id="cell6">X</div>
+          <div class="cell" id="cell7">X</div>
+          <div class="cell" id="cell8">X</div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

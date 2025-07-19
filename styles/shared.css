@@ -1,0 +1,55 @@
+/* CSS variables */
+:root {
+  --primary-color: rgb(235, 226, 245);
+  --secondary-color: rgb(53, 18, 86);
+  --third-color: rgb(234, 200, 200);
+ 
+
+  --text-color: white;
+  --font-family: "Arial", sans-serif;
+}
+
+body {
+  background-color: var(--primary-color);
+  font-family: var(--font-family);
+  text-align: center;
+}
+
+header {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  padding: 0.8rem;
+}
+
+#playerInfo {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+article {
+  background-color: var(--third-color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin: 1rem;
+}
+
+.gameBoard {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 6rem 6rem 6rem;
+  gap: 1rem 1rem;
+
+}
+
+.cell {
+  width: 6rem;
+  height: 6rem;
+  background-color: var(--third-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: var(--text-color);
+  cursor: pointer;
+}
