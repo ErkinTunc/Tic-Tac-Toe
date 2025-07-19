@@ -1,11 +1,13 @@
 /* CSS variables */
 :root {
-  --primary-color: rgb(235, 226, 245);
-  --secondary-color: rgb(53, 18, 86);
-  --third-color: rgb(234, 200, 200);
- 
-
-  --text-color: white;
+  --primary-color: #f6f0fa; /* Açık arka plan */
+  --secondary-color: #3a1a56; /* Koyu mor */
+  
+  --accent-color: #a87cc2; /* Ara ton (hover, buton için) */
+  --card-color: #dbc6f2; /* Kartlar */
+  
+  --text-color: #ffffff;
+  --text-dark: #2e1342;
   --font-family: "Arial", sans-serif;
 }
 
@@ -28,7 +30,7 @@ header {
 }
 
 article {
-  background-color: var(--third-color);
+  background-color: var(--card-color);
   padding: 1rem;
   border-radius: 0.5rem;
   margin: 1rem;
@@ -45,7 +47,7 @@ article {
 .cell {
   width: 6rem;
   height: 6rem;
-  background-color: var(--third-color);
+  background-color: var(--card-color);
   display: flex;
   justify-content: center;
   align-items: center;
