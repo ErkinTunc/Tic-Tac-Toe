@@ -2,10 +2,12 @@
 :root {
   --primary-color: #f6f0fa; /* Açık arka plan */
   --secondary-color: #3a1a56; /* Koyu mor */
-  
-  --accent-color: #a87cc2; /* Ara ton (hover, buton için) */
+
+  --accent-color: #774296; /* Ara ton (hover, buton için) */
   --card-color: #dbc6f2; /* Kartlar */
-  
+
+  --accent-hover-color: #9255b1; /* Ara ton (hover, buton için) */
+
   --text-color: #ffffff;
   --text-dark: #2e1342;
   --font-family: "Arial", sans-serif;
@@ -23,17 +25,123 @@ header {
   padding: 0.8rem;
 }
 
+.hidden {
+  display: none;
+}
+
 #playerInfo {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 1rem;
 }
 
 article {
   background-color: var(--card-color);
-  padding: 1rem;
+  padding: 1rem 6rem;
   border-radius: 0.5rem;
   margin: 1rem;
+}
+
+.player-name {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.player-symbol {
+  font-size: 2rem;
+  color: var(--text-dark);
+  font-weight: bolder;
+  margin: 0.8rem 1rem;
+}
+
+.edit-button {
+  color: var(--secondary-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.edit-button:hover {
+  background-color: var(--accent-hover-color);
+}
+
+#editPlayerSection {
+  background-color: rgb(193, 184, 184);
+  color: black;
+  padding: 1rem;
+  border-radius: 0.2rem;
+  margin: 1rem auto;
+  max-width: 30rem;
+}
+#editPlayerSection h2 {
+  margin: 0.5rem 0;
+}
+
+#editPlayerSection input {
+  width: 50%;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  border: none;
+  margin-bottom: 0.5rem;
+}
+
+#editCancelNameButton {
+  background-color: inherit;
+  color: var(--text-dark);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#editCancelNameButton:hover {
+  background-color: var(--accent-hover-color);
+  color: var(--text-color);
+}
+
+#editPlayerNameButton {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#editPlayerNameButton button:hover {
+  background-color: var(--accent-hover-color);
+}
+
+#newGameButton {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+#newGameButton:hover {
+  background-color: var(--accent-hover-color);
+}
+
+.gameFeedback {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  padding: 1rem;
+  border-radius: 0.2rem;
+  margin: 1rem auto;
+  max-width: 30rem;
 }
 
 .gameBoard {
@@ -41,7 +149,7 @@ article {
   justify-content: center;
   grid-template-columns: 6rem 6rem 6rem;
   gap: 1rem 1rem;
-
+  margin: 2rem auto;
 }
 
 .cell {
