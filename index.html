@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="styles/shared.css" />
     <link rel="stylesheet" href="styles/overlays.css" />
     <link rel="stylesheet" href="styles/configuration.css" />
+    <link rel="stylesheet" href="styles/game.css" />
     <!-- JavaScript -->
     <script src="scripts/shared.js" defer></script>
     <!-- Page Configuration -->
@@ -103,43 +104,26 @@
       <!-- Game Board Section -->
       <section id="active-game">
         <!-- Game FeedBack Section -->
-        <article id="gameFeedbackSection" class="gameFeedback hidden">
-          <h1 id="winMessage">
-            You won, <span id="winner-name">PLAYER NAME</span>!
-          </h1>
-          <p id="extraFeedback">
-            Click "Start New Game" above, to start a new game!
-          </p>
+        <article id="game-over">
+          <h2>You won, <span id="winner-name">PLAYER NAME</span>!</h2>
+          <p>Click "Start New Game" above, to start a new game!</p>
         </article>
 
-        <p id="turnMessage">
-          it is your turn <span id="active-player-name">PLAYER NAME</span>!
-        </p>
-        <ol>
+        <p>it is your turn <span id="active-player-name">PLAYER NAME</span>!</p>
+
+        <ol id="game-board">
+          <li class="disabled">X</li>
           <li></li>
+          <li class="disabled">O</li>
+
           <li></li>
+          <li class="disabled">0</li>
           <li></li>
 
           <li></li>
           <li></li>
-          <li></li>
-
-          <li></li>
-          <li></li>
-          <li></li>
+          <li class="disabled">X</li>
         </ol>
-
-        <div class="gameBoard">
-          <div class="cell" id="cell0"></div>
-          <div class="cell" id="cell1"></div>
-          <div class="cell" id="cell2"></div>
-          <div class="cell" id="cell3"></div>
-          <div class="cell" id="cell4"></div>
-          <div class="cell" id="cell5"></div>
-          <div class="cell" id="cell6"></div>
-          <div class="cell" id="cell7"></div>
-          <div class="cell" id="cell8"></div>
-        </div>
       </section>
     </main>
   </body>

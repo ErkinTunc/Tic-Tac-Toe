@@ -1,7 +1,7 @@
 /* CSS variables */
 :root {
   --primary-color: #f6f0fa; /* Açık arka plan */
-  --secondary-color: #3a1a56; /* Koyu mor */
+  --secondary-color: rgb(58, 26, 86); /* Koyu mor */
 
   --accent-color: #774296; /* Ara ton (hover, buton için) */
   --card-color: #dbc6f2; /* Kartlar */
@@ -23,10 +23,6 @@ header {
   background-color: var(--secondary-color);
   color: var(--text-color);
   padding: 2rem 5%;
-}
-
-.hidden {
-  display: none;
 }
 
 .btn {
@@ -53,33 +49,4 @@ header {
   background-color: var(--secondary-color);
   border-color: transparent;
   color: var(--text-color);
-}
-
-.gameFeedback {
-  background-color: var(--secondary-color);
-  color: var(--text-color);
-  padding: 1rem;
-  border-radius: 0.2rem;
-  margin: 1rem auto;
-  max-width: 30rem;
-}
-
-.gameBoard {
-  display: grid;
-  justify-content: center;
-  grid-template-columns: 6rem 6rem 6rem;
-  gap: 1rem 1rem;
-  margin: 2rem auto;
-}
-
-.cell {
-  width: 6rem;
-  height: 6rem;
-  background-color: var(--card-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 3rem;
-  color: var(--text-color);
-  cursor: pointer;
 }
