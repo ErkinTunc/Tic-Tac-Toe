@@ -25,64 +25,110 @@
     />
     <link rel="manifest" href="img/favicon/site.webmanifest" />
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Styles -->
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/shared.css" />
+    <link rel="stylesheet" href="styles/overlays.css" />
+    <link rel="stylesheet" href="styles/configuration.css" />
     <!-- JavaScript -->
     <script src="scripts/shared.js" defer></script>
     <!-- Page Configuration -->
-    <title>TicTacToe</title>
+    <title>Tic Tac Toe</title>
   </head>
   <body>
+    <div id="backdrop"></div>
     <header>
       <h1>Play Tic, Tac, Toe</h1>
       <p>Built with HTML, CSS, JavaScript and - of course - lots of love!</p>
     </header>
     <main>
-      <!-- Player info Section -->
-      <section>
-        <div id="playerInfo">
-          <article>
-            <p>Player 1</p>
-            <p id="userName1" class="player-name">PLAYER NAME</p>
-            <p id="symbol1" class="player-symbol">X</p>
-            <a href="" class="edit-button">Edit</a
-            ><!-- Should change -->
-          </article>
-          <article>
-            <p>Player 2</p>
-            <p id="userName2" class="player-name">PLAYER NAME</p>
-            <p id="symbol2" class="player-symbol">O</p>
-            <a href="" class="edit-button">Edit</a
-            ><!-- Should change -->
-          </article>
-        </div>
-
-        <a id="newGameButton" href="">Start New Game</a>
-      </section>
-
-      <section id="editPlayerSection" class=""> <!-- TODO: add hidden class -->
+      <!-- Edit Player Section -->
+      <aside id="config-overlay" class="modal">
+        <!-- TODO: add hidden class -->
         <h2 id="editPlayerTitle">Chose your name</h2>
-        <p>Player name</p>
-        <form action="">
-          <input type="text" />
-        </form>
-        <button id="editPlayerNameButton" type="button">Cancel</button>
-        <button id="editCancelNameButton" type="submit">Submit</button>
-      </section>
 
-      <!-- Game FeedBack Section -->
-      <section id="gameFeedbackSection" class="gameFeedback hidden">
-        <h1 id="winMessage">You won, Erkin!</h1>
-        <p id="extraFeedback">
-          Click "Start New Game" above, to start a new game!
-        </p>
+        <form action="">
+          <div class="form-control">
+            <label for="editPlayerNameInput">Player Name</label>
+            <input id="editPlayerNameInput" type="text" />
+          </div>
+          <div>
+            <button id="editCancelNameButton" class="btn btn-alt" type="button">
+              Cancel
+            </button>
+            <button id="editPlayerNameButton" class="btn" type="submit">
+              Submit
+            </button>
+          </div>
+        </form>
+      </aside>
+
+      <!-- Player info Section -->
+      <section id="game-configuration">
+        <ol id="playerInfo">
+          <li>
+            <article>
+              <h2>Player 1</h2>
+              <h3 id="userName1">PLAYER NAME</h3>
+              <p id="symbol1" class="player-symbol">X</p>
+              <button href="" id="editPlayer1NameButton" class="btn btn-alt">
+                Edit
+              </button>
+            </article>
+          </li>
+
+          <li>
+            <article>
+              <h2>Player 2</h2>
+              <h3 id="userName2">PLAYER NAME</h3>
+              <p id="symbol2" class="player-symbol">O</p>
+              <button href="" id="editPlayer2NameButton" class="btn btn-alt">
+                Edit
+              </button>
+            </article>
+          </li>
+        </ol>
+
+        <button id="newGameButton" class="btn" href="">Start New Game</button>
       </section>
 
       <!-- Game Board Section -->
+      <section id="active-game">
+        <!-- Game FeedBack Section -->
+        <article id="gameFeedbackSection" class="gameFeedback hidden">
+          <h1 id="winMessage">
+            You won, <span id="winner-name">PLAYER NAME</span>!
+          </h1>
+          <p id="extraFeedback">
+            Click "Start New Game" above, to start a new game!
+          </p>
+        </article>
 
-      <section>
-        <p id="turnMessage">it is your turn Erkin</p>
+        <p id="turnMessage">
+          it is your turn <span id="active-player-name">PLAYER NAME</span>!
+        </p>
+        <ol>
+          <li></li>
+          <li></li>
+          <li></li>
+
+          <li></li>
+          <li></li>
+          <li></li>
+
+          <li></li>
+          <li></li>
+          <li></li>
+        </ol>
+
         <div class="gameBoard">
           <div class="cell" id="cell0"></div>
           <div class="cell" id="cell1"></div>
