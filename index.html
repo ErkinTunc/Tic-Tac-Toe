@@ -40,7 +40,9 @@
     <link rel="stylesheet" href="styles/configuration.css" />
     <link rel="stylesheet" href="styles/game.css" />
     <!-- JavaScript -->
-    <script src="scripts/shared.js" defer></script>
+    <script src="scripts/config.js" defer></script>
+    <script src="scripts/game.js" defer></script>
+    <script src="scripts/app.js" defer></script>
     <!-- Page Configuration -->
     <title>Tic Tac Toe</title>
   </head>
@@ -54,15 +56,21 @@
       <!-- Edit Player Section -->
       <aside id="config-overlay" class="modal">
         <!-- TODO: add hidden class -->
-        <h2 id="editPlayerTitle">Chose your name</h2>
+        <h2>Chose your name</h2>
 
-        <form action="">
+        <form>
           <div class="form-control">
             <label for="editPlayerNameInput">Player Name</label>
-            <input id="editPlayerNameInput" type="text" />
+            <input
+              id="editPlayerNameInput"
+              name="playerName"
+              type="text"
+              required
+            />
           </div>
+          <p id="config-errors"></p>
           <div>
-            <button id="editCancelNameButton" class="btn btn-alt" type="button">
+            <button id="editCancelNameButton" class="btn btn-alt" type="reset">
               Cancel
             </button>
             <button id="editPlayerNameButton" class="btn" type="submit">
@@ -76,22 +84,32 @@
       <section id="game-configuration">
         <ol id="playerInfo">
           <li>
-            <article>
+            <article id="player-1-data">
               <h2>Player 1</h2>
               <h3 id="userName1">PLAYER NAME</h3>
               <p id="symbol1" class="player-symbol">X</p>
-              <button href="" id="editPlayer1NameButton" class="btn btn-alt">
+              <button
+                href=""
+                id="editPlayer1NameButton"
+                class="btn btn-alt"
+                data-playerid="1"
+              >
                 Edit
               </button>
             </article>
           </li>
 
           <li>
-            <article>
+            <article id="player-2-data">
               <h2>Player 2</h2>
               <h3 id="userName2">PLAYER NAME</h3>
               <p id="symbol2" class="player-symbol">O</p>
-              <button href="" id="editPlayer2NameButton" class="btn btn-alt">
+              <button
+                href=""
+                id="editPlayer2NameButton"
+                class="btn btn-alt"
+                data-playerid="2"
+              >
                 Edit
               </button>
             </article>

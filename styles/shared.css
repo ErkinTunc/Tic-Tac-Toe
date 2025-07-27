@@ -3,10 +3,10 @@
   --primary-color: #f6f0fa; /* Açık arka plan */
   --secondary-color: rgb(58, 26, 86); /* Koyu mor */
 
-  --accent-color: #774296; /* Ara ton (hover, buton için) */
+  --accent-color: #723e90; /* Ara ton (hover, buton için) */
   --card-color: #dbc6f2; /* Kartlar */
 
-  --accent-hover-color: #9255b1; /* Ara ton (hover, buton için) */
+  --accent-hover-color: rgb(138, 67, 173); /* Ara ton (hover, buton için) */
 
   --text-color: #ffffff;
   --text-dark: #2e1342;
