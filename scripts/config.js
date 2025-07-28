@@ -1,20 +1,31 @@
-// site logic will be here. It takes the user input validate it and store it
 
+
+/**
+ * Opens the player configuration overlay to edit player names.
+ * @param {*} event 
+ */
 function openPlayerConfig(event) {
   editedPlayer = +event.target.dataset.playerid; // set the editedPlayer variable to the selected player ID // we placed "+" in the beginning to make it an integer  + "1" => 1
   playerConfigOverlayElement.style.display = "block";
   backdropElement.style.display = "block";
 }
 
+/**
+ * Closes the player configuration overlay.
+ */
 function closePlayerConfig() {
   playerConfigOverlayElement.style.display = "none";
   backdropElement.style.display = "none";
   formElement.firstElementChild.classList.remove("error"); // remove error class from the first child of the form (the input field)
   errorsOutputElement.textContent = ""; // clear the error message
   formElement.firstElementChild.lastElementChild.value = ""; // clear the input field
-
 }
 
+/**
+ * Saves the player configuration when the form is submitted.
+ * @param {*} event 
+ * @returns 
+ */
 function savePlayerConfig(event) {
   event.preventDefault(); // prevent the form from submitting and reloading the page
 
