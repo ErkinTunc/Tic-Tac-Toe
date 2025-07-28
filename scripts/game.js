@@ -1,9 +1,10 @@
 function resetGameStatues() {
   currentRound = 1; // reset the current round to 1
   activePlayer = 0; // reset the active player to player 1
-  gameIsOver = false; // reset the game over status
+  gameIsOver = false; 
   gameOverElement.firstElementChild.innerHTML =
     'You won, <span id="winner-name">PLAYER NAME</span>!';
+    gameOverElement.style.display = "none"; 
   gameAreaElement.style.display = "none";
 
   let gameBoardIndex = 0;
